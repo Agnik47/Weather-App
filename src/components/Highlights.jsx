@@ -1,6 +1,12 @@
 import React from "react";
-
+import Paperplane from "../assets/PaperPlane.png";
 function Highlights({ stats }) {
+  const arrowDirectionStyle = {
+    transform: `rotate(${stats.windDegree}deg)`,
+    width: "2rem",
+    padding: "0.25rem 0.5rem",
+  };
+
   return (
     <div className="bg-slate-600 p-2 text-slate-200 flex flex-col justify-start items-center text-transform scale-100 hover:scale-110 transition-transform duration-300 ease-in-out cursor-pointer">
       <h2 className="mt-2 text-sm">{stats.title}</h2>
@@ -12,22 +18,8 @@ function Highlights({ stats }) {
       {/* direction icon */}
       {stats.direction && (
         <div className="mt-2 flex">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            strokeWidth="1.5"
-            stroke="currentColor"
-            class="w-6 h-6 text-slate-200"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M6 12 3.269 3.125A59.769 59.769 0 0 1 21.485 12 59.768 59.768 0 0 1 3.27 20.875L5.999 12Zm0 0h7.5"
-            />
-          </svg>
-
-          <div className="ms-2 text-slate-200">{stats.direction}</div>
+          <div className="ms-2 text-slate-200">{stats.direction}</div>'
+          <img src={Paperplane} style={arrowDirectionStyle} />
         </div>
       )}
 

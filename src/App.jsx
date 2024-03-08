@@ -56,6 +56,7 @@ function App() {
                 value: weatherData.current.wind_mph,
                 unit: "mph",
                 direction: weatherData.current.wind_dir,
+                windDegree: weatherData.current.wind_degree,
               }}
             />
 
