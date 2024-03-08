@@ -18,7 +18,7 @@ function Highlights({ stats }) {
       {/* direction icon */}
       {stats.direction && (
         <div className="mt-2 flex">
-          <div className="ms-2 text-slate-200">{stats.direction}</div>'
+          <div className="ms-2 text-slate-200">{stats.direction}</div>
           <img src={Paperplane} style={arrowDirectionStyle} />
         </div>
       )}
